@@ -1,0 +1,26 @@
+<%= form_for :professional_account, url: :update_account_professional_account, method: :patch, :html => { :class => "form-horizontal" } do |f| %>
+    <h1>Update Your account</h1>
+
+    <%= f.label :email%>
+    <%= f.email_field :email, value: @professional.email,  class: "form-control"%>
+    
+    <%= f.label :name%>
+    <%= f.text_field :name, class: "form-control"%>
+
+    <%= f.label :business_email%>
+    <%= f.email_field :business_email, class: "form-control"%>
+
+    <%= f.label :secondary_email%>
+    <%= f.email_field :secondary_email, class: "form-control"%>
+
+    <%= f.label :address%>
+    <%= f.text_field :address, class: "form-control"%>
+
+    <%= f.label :contact%>
+    <%= f.text_field :contact, class: "form-control"%>
+
+    <%= f.label :profile_photo%>
+    <%= f.file_field :profile_photo, class: "form-control"%>
+
+    <%= f.submit "Save"%>
+<% end %>

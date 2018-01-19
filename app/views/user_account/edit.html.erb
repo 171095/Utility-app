@@ -1,0 +1,16 @@
+<%= form_for :user_account, url: :update_account_user_account, method: :patch, :html => { :class => "form-horizontal" } do |f| %>
+    <h1>Update Your account</h1>
+
+    <%= f.label :email%>
+    <%= f.email_field :email, value: @user.email,  class: "form-control"%>
+    <%= f.label :name%>
+    <%= f.text_field :name, class: "form-control"%>
+
+    <%= f.label :contact%>
+    <%= f.text_field :contact, class: "form-control"%>
+
+    <%= f.label :profile_photo%>
+    <%= f.file_field :profile_photo, class: "form-control"%>
+
+    <%= f.submit "Save"%>
+<% end %>
