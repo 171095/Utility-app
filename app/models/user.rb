@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :confirmable, :omniauthable
  
-  # mount_uploader :profile_photo, ImageUploader
+  mount_uploader :profile_photo, ImageUploader
 
   def self.from_omniauth(auth)
     user = User.where(:provider => auth.try(:provider) || auth["provider"], :uid => auth.try(:uid) || auth["uid"]).first
