@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_proof_one: MyString
+  id_proof_two: MyString
+  id_proof: 
+  id_proof_four: MyString
+  professional_id: 1
+
+two:
+  id_proof_one: MyString
+  id_proof_two: MyString
+  id_proof: 
+  id_proof_four: MyString
+  professional_id: 1

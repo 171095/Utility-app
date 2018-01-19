@@ -1,0 +1,2 @@
+class ProAttachment < ApplicationRecord
+end
