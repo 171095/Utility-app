@@ -1,0 +1,25 @@
+<%- model_class = CurrentWorkplace -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:joined_on) %>:</strong></dt>
+  <dd><%= @current_workplace.joined_on %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:about_workplace) %>:</strong></dt>
+  <dd><%= @current_workplace.about_workplace %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:designation) %>:</strong></dt>
+  <dd><%= @current_workplace.designation %></dd>
+   <dt><strong><%= model_class.human_attribute_name(:work_profile) %>:</strong></dt>
+  <dd><%= @current_workplace.work_profile %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              current_workplaces_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_current_workplace_path(@current_workplace), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              current_workplace_path(@current_workplace),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

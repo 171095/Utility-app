@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  joined_on: 2018-01-20 12:41:48
+  work_profile: MyString
+  designation: MyString
+  abount_workplace: MyText
+  professional_id: 1
+
+two:
+  joined_on: 2018-01-20 12:41:48
+  work_profile: MyString
+  designation: MyString
+  abount_workplace: MyText
+  professional_id: 1
