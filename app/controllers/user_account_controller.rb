@@ -7,7 +7,7 @@ class UserAccountController < ApplicationController
     @user = User.find(params[:id])
     if @user.update(user_account_params)
       sign_in(@user, :bypass => true)
-      redirect_to root_path 
+      redirect_to user_account_path 
     end
   end
 

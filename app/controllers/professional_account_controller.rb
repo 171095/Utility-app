@@ -7,7 +7,7 @@ class ProfessionalAccountController < ApplicationController
     @professional = Professional.find(params[:id])
     if @professional.update(professional_account_params)
       sign_in(@professional, :bypass => true)
-      redirect_to root_path 
+      redirect_to professional_account_path 
     end
   end
 
