@@ -25,7 +25,13 @@
   <div class="form-group">
     <%= f.label :skill_id, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-    <%= f.select :skill_id, options_for_select(Skill.all.collect{ |skill| [skill.name, skill.id]}, (f.object.try(:skill_id))), {prompt: 'Select your skills'}, { :class => 'form-control'} %>
+      <select id="skills_select" class="form-control input-lg" multiple="multiple">
+        <option></option>
+          <% Skill.all.each do |skill| %>
+            <option value="<%= skill.id %>" data-select-type="filter" ><%= skill.name %></option>
+          <% end %>
+      </select>
+    <%#= f.select :skill_id, options_for_select(Skill.all.collect{ |skill| [skill.name, skill.id]}, (f.object.try(:skill_id))), {prompt: 'Select your skills'}, { :class => 'form-control'} %>
     </div>
     <%=f.error_span(:skill_id) %>
   </div>
@@ -38,3 +44,10 @@
   </div>
 
 <% end %>
+<script type="text/javascript">
+  $(document).ready(function() {
+  $("#skills_select").select2({
+    placeholder: "Choose your skills"
+  });
+});
+</script>

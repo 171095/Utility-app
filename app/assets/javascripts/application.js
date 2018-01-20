@@ -16,4 +16,6 @@
 //= require_tree .
 //= require twitter/bootstrap
 //= require cocoon
+//= require select2.full
+//= require select2
 
