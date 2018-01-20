@@ -10,7 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180119132359) do
+ActiveRecord::Schema.define(version: 20180120071148) do
+
+  create_table "current_workplaces", force: :cascade do |t|
+    t.datetime "joined_on"
+    t.string "work_profile"
+    t.string "designation"
+    t.text "about_workplace"
+    t.integer "professional_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "past_details", force: :cascade do |t|
+    t.datetime "joined_on"
+    t.datetime "left_on"
+    t.string "work_profile"
+    t.text "about_workplace"
+    t.string "designation"
+    t.integer "professional_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "pro_attachments", force: :cascade do |t|
     t.string "id_proof_one"

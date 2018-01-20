@@ -1,0 +1,19 @@
+<%= form_for :past_detail, url: :add_past_details_professional_account, method: :post, remote: true do |f|%>
+
+  <%= f.label :Joining_Date %>
+  <%= f.text_field :joined_on , class: "form-control"%>
+
+  <%= f.label :Left_On %>
+  <%= f.text_field :left_on , class: "form-control"%>
+
+  <%= f.label :Work_Profile %>
+  <%= f.text_field :work_profile , class: "form-control"%>
+
+  <%= f.label :About_Workplace %>
+  <%= f.text_area :about_workplace , class: "form-control"%>
+
+  <%= f.label :Designation %>
+  <%= f.text_field :designation , class: "form-control"%>
+
+ <%= f.submit "save"%>
+<% end %>
