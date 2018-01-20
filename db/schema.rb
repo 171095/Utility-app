@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180119064651) do
+ActiveRecord::Schema.define(version: 20180119132359) do
+
+  create_table "pro_attachments", force: :cascade do |t|
+    t.string "id_proof_one"
+    t.string "id_proof_two"
+    t.string "id_proof_three"
+    t.string "id_proof_four"
+    t.integer "professional_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "pro_skills", force: :cascade do |t|
     t.integer "professional_id"
