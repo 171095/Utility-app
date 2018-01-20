@@ -1,0 +1,8 @@
+/*Professional Profile- image*/
+.img-circle {
+    border-radius: 50%;
+}
+.professional_pic img{
+    width: 100px;
+    height: 100px;
+}

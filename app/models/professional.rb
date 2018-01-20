@@ -6,5 +6,9 @@ class Professional < ApplicationRecord
 
     mount_uploader :profile_photo, ImageUploader
     has_many :pro_skills, dependent: :destroy
+    has_many :past_details, dependent: :destroy
+    has_one :current_workplace, dependent: :destroy
+    geocoded_by :address   
+    after_validation :geocode 
     
 end

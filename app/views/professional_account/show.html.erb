@@ -1,1 +1,24 @@
-<h1>Professional Deshboard</h1>
+<h1>Edit Your Profile</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-2 professional_pic">
+      <%= image_tag @professional.profile_photo.url , class: "img-circle"%>
+    </div>
+    <div class="col-md-10">
+      <h4>Name : <%= @professional.name %></h4>
+      <h4>Email : <%= @professional.email %></h4>
+      <h4>Contact : <%= @professional.contact %></h4>
+      <h4>Address : <%= @professional.address %></h4>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <%= link_to "Add Past Details",new_past_detail_path , class: "btn  btn-primary "%>
+    </div>
+    <div class="col-md-6">
+      <%= link_to "Add Current Details",new_current_workplace_path , class: "btn  btn-primary "%>
+    </div>
+  </div>
+</div>

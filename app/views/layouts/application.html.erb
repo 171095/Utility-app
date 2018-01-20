@@ -27,12 +27,29 @@
         <a class="navbar-brand" href="#">UtilityApp</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <% if user_signed_in? %>
-              <li><%= link_to "Sign Out", destroy_user_session_path  %></li>
-            <% else %>
-              <li><%= link_to "Sign In", new_user_session_path %></li>
-              <li><%= link_to "Sign Up", new_user_registration_path  %></li>
-            <% end %>  
+            <li><%= link_to "Skills", skills_path%></li>
+            <li><%= link_to "Professional Skills", pro_skills_path%></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">User<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <% if user_signed_in? %>
+                  <li><%= link_to "Sign Out", destroy_user_session_path  %></li>
+                <% else %>
+                  <li><%= link_to "Sign In", new_user_session_path %></li>
+                  <li><%= link_to "Sign Up", new_user_registration_path  %></li>
+                <% end %>  
+              </ul>
+            </li> 
+            <!-- Professional Links-->
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Professional<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <% if professional_signed_in? %>
+                  <li><%= link_to "Sign Out", destroy_professional_session_path  %></li>
+                <% else %>
+                  <li><%= link_to "Sign In", new_professional_session_path %></li>
+                  <li><%= link_to "Sign Up", new_professional_registration_path  %></li>
+                <% end %>  
+              </ul>
+            </li>     
           </ul>
         </div>
       </div>
