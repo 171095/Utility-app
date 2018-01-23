@@ -1,0 +1,27 @@
+ <li class="list-group-item">
+  <div class="row">
+    <div class="col-md-6">
+      <h5>Joined: <%= past_detail.joined_on %></h5>
+      <h5>Left: <%= past_detail.left_on %></h5>
+      <h5>Workprofile: <%= past_detail.work_profile %></h5>
+      <h5>Designation: <%= past_detail.designation %></h5>
+      <h5>Workplace: <%= past_detail.about_workplace %></h5>   
+    </div>
+    <div class="col-md-6">
+      <%= link_to "Edit", edit_past_detail_path(past_detail), :class => 'btn btn-default btn-xs'%>
+      <%= link_to "Delete", past_detail_path(past_detail),
+          :method => :delete, :class => 'btn btn-xs btn-danger' %>
+    </div>
+  </div>
+</li> 
+<!-- 
+<tr id="past_detail_<%= past_detail.id %>">
+  <td>Joined: <%= past_detail.joined_on %></td>
+  <td>Left: <%= past_detail.left_on %></td>
+  <td>Workprofile: <%= past_detail.work_profile %></td>
+  <td>Designation: <%= past_detail.designation %></td>
+  <td>Workplace: <%= past_detail.about_workplace %></td>   
+  <td><%= link_to "Edit", edit_past_detail_path(past_detail), :class => 'btn btn-default btn-xs',  :remote => true %></td>
+  <td><%= link_to "Delete", past_detail_path(past_detail),
+          :method => :delete, :class => 'btn btn-xs btn-danger',  :remote => true  %></td>
+</tr> -->

@@ -1,0 +1,16 @@
+$('form').hide();
+$("#past_detail_listing").prepend("<%= escape_javascript render(partial: 'past_detail', locals: {past_detail: @past_detail})%>");
+
+$("#pro-past-details").html('');
+<%# if @past_detail.errors.count == 0 %>
+
+//     $('#new_past_detail').remove();
+//     $('#pro-past-details').show();
+//     $('#past_details').append('<%= j render("past_detail", :past_detail => @past_detail) %>');
+
+// <% else %>
+
+//     $('.new_past_detail').remove();
+//     $('#pro-past-details').after('<%= j render("form") %>');
+
+<%# end %>

@@ -1,0 +1,15 @@
+$('form').hide();
+$('div#<%= dom_id(@past_detail) %>').replaceWith('<%= j render partial: "past_detail", locals: {past_detail: @past_detail} %>');
+
+
+<%# if @past_detail.errors.count == 0 %>
+// $('#pro-past-details').show()
+// $('#edit_past_detail_<%= @past_detail.id %>').remove();
+// $('#past_detail_<%= @past_detail.id %>').replaceWith('<%= j render @past_detail %>')
+
+// <% else %>
+
+// $('#edit_past_detail_<%= @past_detail.id %>').remove();
+// $('#pro-past-details').after('<%= j render("form") %>');
+
+<%# end %>

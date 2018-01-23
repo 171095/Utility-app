@@ -3,11 +3,9 @@ Rails.application.routes.draw do
   root 'home#index'
   resources :past_details
   resources :current_workplaces
-  resources :professional_account do 
+  resources :professional_account do
     member do
       patch :update_account
-      post :add_past_details
-      post :add_current_details
     end
   end
   resources :user_account do 
