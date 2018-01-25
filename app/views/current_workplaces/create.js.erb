@@ -1,0 +1,12 @@
+<% if @current_workplace.errors.count == 0 %>
+
+    $('#new_current_workplace').remove();
+    $('#pro-current-details').show();
+    $('#current_workplace_listing').append('<%= j render("current_workplace", :current_workplace => @current_workplace) %>');
+
+<% else %>
+
+    $('#new_current_workplace').remove();
+    $('#pro-current-details').after('<%= j render("form") %>');
+
+<% end %>

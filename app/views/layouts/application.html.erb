@@ -44,6 +44,7 @@
                 <ul class="dropdown-menu">
                   <% if professional_signed_in? %>
                     <li><%= link_to "Sign Out", destroy_professional_session_path  %></li>
+                    <li><%= link_to "My Account", ""%></li>
                   <% else %>
                     <li><%= link_to "Sign In", new_professional_session_path %></li>
                     <li><%= link_to "Sign Up", new_professional_registration_path  %></li>

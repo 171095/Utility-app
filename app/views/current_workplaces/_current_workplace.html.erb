@@ -1,0 +1,15 @@
+ <li class="list-group-item" id="current_workplace_<%= @professional.current_workplace.id %>">
+  <div class="row">
+    <div class="col-md-6">
+      <h5>Joined: <%= @professional.current_workplace.joined_on %></h5>
+      <h5>Workprofile: <%= @professional.current_workplace.work_profile %></h5>
+      <h5>Designation: <%= @professional.current_workplace.designation %></h5>
+      <h5>Workplace: <%= @professional.current_workplace.about_workplace %></h5>   
+    </div>
+    <div class="col-md-6">
+      <%= link_to "Edit", edit_current_workplace_path(@professional.current_workplace), remote: true, :class => 'btn btn-default btn-xs'%>
+      <%= link_to "Delete", current_workplace(@professional.current_workplace),
+          method: :delete, remote: true, :class => 'btn btn-xs btn-danger' %>
+    </div>
+  </div>
+</li> 

@@ -1,0 +1,14 @@
+$('form').hide();
+
+<% if @current_workplace.errors.count == 0 %>
+$('#edit_current_workplace').remove();
+$('#pro-current-details').show();
+$('#current_workplace_<%= @current_workplace.id %>').replaceWith("<%= j render(partial: 'current_workplace', locals: {current_workplace: @current_workplace}) %>")
+
+<% else %>
+
+$('#edit_current_workplace_<%= @current_workplace.id %>').remove();
+$('#pro-current-details').after('<%= j render("form") %>');
+
+<% end %>
+
