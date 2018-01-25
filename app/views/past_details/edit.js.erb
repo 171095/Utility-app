@@ -1,4 +1,2 @@
-$('form').hide();
-$('div#<%= dom_id(@past_detail) %>').replaceWith('<%= j render("form") %>');
+$('#pro-past-details').hide().after('<%= j render("form") %>');
 
-// $('#pro-past-details').hide().after('<%= j render("form") %>');

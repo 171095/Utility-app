@@ -1,0 +1,20 @@
+<ul class="list-group" id="past_detail_listing">
+      <% @professional.past_details.each do |past_detail| %>
+        <li class="list-group-item" id="past_detail_<%= past_detail.id %>">
+          <div class="row">
+            <div class="col-md-6">
+              <h5>Joined: <%= past_detail.joined_on %></h5>
+              <h5>Left: <%= past_detail.left_on %></h5>
+              <h5>Workprofile: <%= past_detail.work_profile %></h5>
+              <h5>Designation: <%= past_detail.designation %></h5>
+              <h5>Workplace: <%= past_detail.about_workplace %></h5>   
+            </div>
+            <div class="col-md-6">
+              <%= link_to "Edit", edit_past_detail_path(past_detail), :class => 'btn btn-default btn-xs', remote: true%>
+              <%= link_to "Delete", past_detail_path(past_detail),
+                  :method => :delete, :class => 'btn btn-xs btn-danger', remote: true %>
+            </div>
+          </div>
+        </li>
+      <% end %>
+    </ul>

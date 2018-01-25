@@ -13,36 +13,26 @@
   </div>
 </div>
 <hr>
-<div class="past-details-container container">
-  <ul class="list-group" id="past_detail_listing">
-    <% @professional.past_details.each do |past_detail| %>
-      <li class="list-group-item">
-        <div class="row">
-          <div class="col-md-6">
-            <h5>Joined: <%= past_detail.joined_on %></h5>
-            <h5>Left: <%= past_detail.left_on %></h5>
-            <h5>Workprofile: <%= past_detail.work_profile %></h5>
-            <h5>Designation: <%= past_detail.designation %></h5>
-            <h5>Workplace: <%= past_detail.about_workplace %></h5>   
-          </div>
-          <div class="col-md-6">
-            <%= link_to "Edit", edit_past_detail_path(past_detail), :class => 'btn btn-default btn-xs', remote: true%>
-            <%= link_to "Delete", past_detail_path(past_detail),
-                :method => :delete, :class => 'btn btn-xs btn-danger', remote: true %>
-          </div>
-        </div>
-      </li>
-    <% end %>
-  </ul>
-</div>
+<!-- Add Past Details-->
+  <div class="past-details-container container">
+    <%= render 'past_details'%>
+  </div>
+<!--End -->
+<hr>
+<!-- Add Current Details-->
+
+  <div class="current-detail-container container">
+    <%= render 'current_details'%>
+  </div>
+
+<!--End -->
+ 
 
 <div class="container">
   <div class="row">
     <div class="col-md-6">
       <%= link_to "Add Past Details", new_past_detail_path , class: "btn btn-primary", remote: true %>
-      <div class="div-spacing">
-      </div>
-      <div id="show-past-details"></div>
+      <div class="div-spacing"></div>
       <div id="pro-past-details">
       </div>
     </div>
@@ -50,7 +40,7 @@
       <%= link_to "Add Current Details",new_current_workplace_path , class: "btn  btn-primary", remote: true %>
         <div class="div-spacing"></div>
         <div id="pro-current-details">
-        </div>
+      </div>
     </div>
   </div>
 </div>

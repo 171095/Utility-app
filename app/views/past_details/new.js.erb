@@ -1,3 +1,1 @@
-$("#pro-past-details").after('<%= escape_javascript render(partial: 'new') %>');
-
-$('#pro-past-details').hide();
+$('#pro-past-details').hide().after('<%= j render("form") %>');
